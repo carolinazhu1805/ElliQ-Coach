@@ -1,21 +1,34 @@
-<<<<<<< HEAD
-# React + Vite
+# ElliQ Sudoku Coach
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project contains an AI-powered Sudoku coaching interface designed to simulate deployment on ElliQ's tablet screen. Built as a prototype to demonstrate personalisation and conversational coaching for older adults.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Try it out at: https://elliq-coach.vercel.app/
 
-## React Compiler
+## Running locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Then open http://localhost:5173 in your browser.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# ElliQ-Coach
-AI-powered Sudoku coaching interface designed to simulate deployment on ElliQ's tablet screen. 
->>>>>>> 96ad8161486f60e708cebef226a30eb843cc06d3
+## Settings UI: A vs B
+
+The settings panel has two layout variants, controlled by a single constant at the top of `src/App.jsx`:
+
+```js
+const SETTINGS_UI = "A"; // change to "B" for full-screen settings
+```
+
+- **Option A** — settings slide in as a side drawer over the game board, keeping the puzzle visible in the background
+- **Option B** — settings open as a separate full-screen page
+
+## Credits
+
+- [React 19](https://react.dev/) — UI framework
+- [Vite](https://vite.dev/) — build tool and dev server
+- [Groq API](https://groq.com/) — powers the ElliQ coach using the `llama-3.1-8b-instant` model
+- [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API) — browser-native voice input and text-to-speech 
