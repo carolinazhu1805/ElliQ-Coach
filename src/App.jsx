@@ -120,6 +120,7 @@ export default function App() {
   const [activeProfile, setActiveProfile] = useState(null);
   const [newProfileName, setNewProfileName] = useState("");
   const [personality, setPersonality] = useState("friendly");
+  const [hintStyle, setHintStyle] = useState("proactive");
   const [difficulty, setDifficulty] = useState("medium");
   const [colorMood, setColorMood] = useState("warm");
   const [coachMode, setCoachMode] = useState(true);
@@ -378,6 +379,7 @@ export default function App() {
 
           {[
             { label:"Coach personality", setter:setPersonality, val:personality, options:[{val:"friendly",label:"Friendly & encouraging"},{val:"neutral",label:"Neutral & focused"}] },
+            { label:"Hint style", setter:setHintStyle, val:hintStyle, options:[{val:"proactive",label:"Proactive (coach checks in)"},{val:"onrequest",label:"On request (I'll ask)"}] },
             { label:"Difficulty", setter:setDifficulty, val:difficulty, options:[{val:"easy",label:"Easy"},{val:"medium",label:"Medium"},{val:"hard",label:"Hard"}] },
             { label:"Colour mood", setter:setColorMood, val:colorMood, options:[{val:"warm",label:"Warm"},{val:"cool",label:"Cool"},{val:"neutral",label:"Neutral"}] },
           ].map(({ label, setter, val, options }) => (
@@ -421,6 +423,7 @@ export default function App() {
           </div>
           {[
             { label:"Coach personality", setter:setPersonality, val:personality, options:[{val:"friendly",label:"Friendly & encouraging"},{val:"neutral",label:"Neutral & focused"}] },
+            { label:"Hint style", setter:setHintStyle, val:hintStyle, options:[{val:"proactive",label:"Proactive (coach checks in)"},{val:"onrequest",label:"On request (I'll ask)"}] },
             { label:"Difficulty", setter:setDifficulty, val:difficulty, options:[{val:"easy",label:"Easy"},{val:"medium",label:"Medium"},{val:"hard",label:"Hard"}] },
             { label:"Colour mood", setter:setColorMood, val:colorMood, options:[{val:"warm",label:"Warm"},{val:"cool",label:"Cool"},{val:"neutral",label:"Neutral"}] },
           ].map(({ label, setter, val, options }) => (
@@ -627,6 +630,7 @@ export default function App() {
               </p>
               {[
                 { label:"Coach personality", setter:setPersonality, val:personality, options:[{val:"friendly",label:"Friendly"},{val:"neutral",label:"Neutral"}] },
+                { label:"Hint style", setter:setHintStyle, val:hintStyle, options:[{val:"proactive",label:"Proactive"},{val:"onrequest",label:"On request"}] },
                 { label:"Difficulty", setter:setDifficulty, val:difficulty, options:[{val:"easy",label:"Easy"},{val:"medium",label:"Medium"},{val:"hard",label:"Hard"}] },
                 { label:"Colour mood", setter:setColorMood, val:colorMood, options:[{val:"warm",label:"Warm"},{val:"cool",label:"Cool"},{val:"neutral",label:"Neutral"}] },
               ].map(({ label, setter, val, options }) => (
